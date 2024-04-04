@@ -2,12 +2,13 @@ import "./index.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters";
-import Logo from './Logo';
 import Loader from "react-loaders";
+import Rockstar from '../../assets/images/rockstar.webp'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
-    const nameArray = ['n', 'o', 'l', 'l', 'i', 'e', ' ', 'p', 'e', 'r', 'a', 'l', 't', 'a', '.'];
+    const nameArrayFirst = ['N', 'o', 'l', 'l', 'i', 'e'];
+    const nameArraySecond = ['P', 'e', 'r', 'a', 'l', 't', 'a']
 
     useEffect(() => {
         setTimeout(() => {
@@ -20,12 +21,20 @@ const Home = () => {
         <div className="container home-page">
             <div className="text-zone">
                 <h1>
-                <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15}/>
+                <AnimatedLetters letterClass={letterClass} strArray={nameArrayFirst} idx={15}/>
                 </h1>
-                <h2>Writer / Singer / Producer / Visionary</h2>
+                <h1>
+                <AnimatedLetters letterClass={letterClass} strArray={nameArraySecond} idx={15}/>
+                </h1>
+                <h2>Writer</h2>
+                <h2>Singer</h2>
+                <h2>Producer</h2>
+                <h2>Visionary</h2>
                 <Link to="/contact" className='flat-button'>Contact Me.</Link>
             </div>
-            <Logo></Logo>
+            <div className="img-zone">
+                <img src={Rockstar} alt="rockstar" />
+            </div>
         </div>
         <Loader type="line-scale" />
         </>

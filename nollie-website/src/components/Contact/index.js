@@ -3,7 +3,6 @@ import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
-import Airplane from './Airplane';
 
 const Contact = () => {
 
@@ -72,7 +71,6 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <Airplane></Airplane>
             </div>
         <Loader type='line-scale' />
         </>

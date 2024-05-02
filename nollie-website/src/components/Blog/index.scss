@@ -1,41 +1,56 @@
-.word-image {
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    bottom: auto;
-    left: auto;
-    margin: auto;
-
-    img {
-        width: 350px;
-        height: auto;
-        opacity: .7;
+.blog-posts {
+    height: calc(100vh - 150px);
+    background-color: #0c0c0c;
+    overflow-y: auto;
+    .post {
+        border-bottom: 10px solid black;
+        min-height: 200px;
+        display: block;
+        .image-left {
+            //border: 2px solid blue;
+            width: 150px;
+            height: 150px;
+            margin-left: 20px;
+            margin-top: 25px;
+            float: left;
+            position: relative;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+        .content-right {
+            //border: 2px solid pink;
+            float: left;
+            height: 200px;
+            width: calc(100% - 210px);
+            margin-left: 30px;
+            .title-date {
+                //border: 2px solid brown;
+                border-bottom: 5px double black;
+                min-height: 50px;
+                p {
+                    color: #ff9966;
+                    font-size: 20pt;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    margin: 10px;
+                }
+            }
+            .text {
+                //border: 2px solid green;
+                margin-left: 20px;
+                margin-right: 20px;
+                p {
+                    color: #ff9966;
+                    font-size: 10pt;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+            }
+        }
     }
 }
-
-.scroll {
-    background-image: linear-gradient(#2b2b3e, #191924);
-    height: 300px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-align: center;
-    padding: 20px;
-}
-
-h2 {
-    color: #247ba0;
-}
-
-h4 {
-    color: #a04924;
-}
-
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 7px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: #a04924;
-  }

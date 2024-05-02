@@ -1,5 +1,5 @@
 import './index.scss';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import LogoN from '../../assets/images/np-logo-no-bg.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome, faUser, faMusic, faBlog } from '@fortawesome/free-solid-svg-icons';
@@ -11,21 +11,21 @@ const Sidebar = () => (
             <img src={LogoN} alt="logo" />
         </Link>
         <nav>
-            <NavLink exact="true" activeclassname="active" to="/">
+            <Link exact="true" activeclassname="active" to="homeId" spy smooth duration={500}>
                 <FontAwesomeIcon icon={faHome} color="#FF9966" />
-            </NavLink>
-            <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
+            </Link>
+            <Link exact="true" activeclassname="active" className="about-link" to="aboutId" spy smooth duration={500}>
                 <FontAwesomeIcon icon={faUser} color="#FF9966" />
-            </NavLink>
-            <NavLink exact="true" activeclassname="active" className="projects-link" to="/projects">
+            </Link>
+            <Link exact="true" activeclassname="active" className="projects-link" to="projectsId" spy smooth duration={500}>
                 <FontAwesomeIcon icon={faMusic} color="#FF9966" />
-            </NavLink>
-            <NavLink exact="true" activeclassname="active" className="blog-link" to="/blog">
+            </Link>
+            <Link exact="true" activeclassname="active" className="blog-link" to="blogId" spy smooth duration={500}>
                 <FontAwesomeIcon icon={faBlog} color="#FF9966" />
-            </NavLink>
-            <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
+            </Link>
+            <Link exact="true" activeclassname="active" className="contact-link" to="contactId" spy smooth duration={500}>
                 <FontAwesomeIcon icon={faEnvelope} color="#FF9966" />
-            </NavLink>
+            </Link>
         </nav>
         <ul>
             <li>
